@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nox | Gaming Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0d0d0d, #000);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #00bfff;
+      text-shadow: 0 0 15px #00bfff;
+    }
+
+    .game-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00bfff88;
+    }
+
+    .game-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #00bfff;
+    }
+
+    .game-card p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .play-btn {
+      background: #00bfff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .play-btn:hover {
+      background: #0099cc;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NOX</h1>
+    <p>Your portal to powerful browser games.</p>
+  </header>
+
+  <div class="game-card">
+    <h2>Stunt Bike</h2>
+    <p>Perform epic stunts and race through challenging levels!</p>
+    <a href="stuntbike.html" class="play-btn">Play Now</a>
+  </div>
+
+  <footer>
+    © 2025 Nox Games. All rights reserved.
+  </footer>
+</body>
+</html>
