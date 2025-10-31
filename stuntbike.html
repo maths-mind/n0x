@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Stunt Bike Extreme</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                background: #efefef;
-                font-family: Arial, sans-serif;
-                overflow: hidden;
-            }
-            .game-container {
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .game-frame {
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="game-container">
-            <iframe 
-                src="https://games.playtropolis.com/stunt-bike-extreme/" 
-                title="Stunt Bike Extreme" 
-                allow="autoplay; fullscreen; microphone; focus-without-user-activation *; screen-wake-lock; gamepad;" 
-                allowfullscreen 
-                sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts allow-same-origin allow-popups" 
-                loading="eager" 
-                class="game-frame">
-            </iframe>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stunt Bike Extreme</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+        #gameFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Only allow access from n0x.vercel.app domain
+        const allowedDomains = ['n0x.vercel.app', 'localhost'];
+        const currentDomain = window.location.hostname;
+        
+        if (!allowedDomains.includes(currentDomain)) {
+            document.body.innerHTML = '<div style="color: white; text-align: center; padding: 50px;">Access denied. This game can only be run from n0x.vercel.app</div>';
+        } else {
+            document.body.innerHTML = '<iframe id="gameFrame" src="https://games.playtropolis.com/stunt-bike-extreme/" allow="autoplay; fullscreen; gamepad" allowfullscreen></iframe>';
+        }
+    </script>
+</body>
 </html>
